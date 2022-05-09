@@ -1,10 +1,16 @@
-const main = document.querySelector('main');
+const container = document.querySelector('main');
 
-for(var i=0; i < 36; i++){
-    var newDiv = document.createElement('div');
-    newDiv.id = 'r'+i;
-    newDiv.className = 'slot';
-    main.appendChild(newDiv);
-}
+
+function makeRows(rows, cols) {
+
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (c = 0; c < (rows * cols); c++) {
+    let cell = document.createElement("div");
+    container.appendChild(cell).className = "slot";
+  };
+};
+
+makeRows(6, 6);
 
 

@@ -8,17 +8,36 @@
     /*background-color: coral;*/
     width: 1000px;
     height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slot {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
     background-color: green;
     width: 130px;
     height: 130px;
     margin: 6px;
     /*display: flex;*/
-    float: left;
+    /* float: left; */
 }
 
 .card {
     margin: auto;
 }
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+#main {
+display: grid;
+justify-content: center;
+grid-gap: 1em;
+grid-template-rows: repeat(var(--grid-rows), 1fr);
+grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
