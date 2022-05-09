@@ -1,0 +1,24 @@
+#header, #sub-header {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.container {
+    /*background-color: coral;*/
+    width: 1000px;
+    height: 1000px;
+}
+
+.slot {
+    background-color: green;
+    width: 130px;
+    height: 130px;
+    margin: 6px;
+    /*display: flex;*/
+    float: left;
+}
+
+.card {
+    margin: auto;
+}
