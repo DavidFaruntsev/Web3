@@ -47,7 +47,7 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
     height: 1000px;
     /*background: bisque;*/
     float: right;
-    padding-top: 11vw;
+    padding-top: 13vw;
 }
 
 .third-container {
