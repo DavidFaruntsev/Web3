@@ -10,6 +10,7 @@
     height: 1000px;
     margin-left: auto;
     margin-right: auto;
+    float: left;
 }
 
 .slot {
@@ -17,8 +18,8 @@
     border: 1px solid #ddd;
     text-align: center;
     background-color: green;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     margin: 6px;
     display: flex;
     float: left;
@@ -40,6 +41,32 @@ grid-gap: 1em;
 grid-template-rows: repeat(var(--grid-rows), 1fr);
 grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
+
+.second-container {
+    width: 410px;
+    height: 1000px;
+    /*background: bisque;*/
+    float: right;
+    padding-top: 11vw;
+}
+
+.third-container {
+    padding-top: 10vw;
+    display: block;
+}
+
+.third-container>button {
+    float: left;
+    clear: left;
+    margin: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+#game {
+    margin-top: 10vw;
+}
+
 
 .parent {
     display: grid;
