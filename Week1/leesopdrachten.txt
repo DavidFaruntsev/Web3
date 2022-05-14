@@ -1,0 +1,6 @@
+Opdracht 2
+
+Wij leven in de wereld waar telefoons voor ons meest belangrijke rol spelen. Je kunt van alles mee doen. Gamen, betalingen maken, internetten enzovoort.
+Waar je ook bent kun je met je telefoon elke website bereiken. Je hoeft niet op een bepaalde plek te zijn wat wel het geval is met een desktop. Telefoons zijn veel handiger.
+Ik ben met auteur eens dat je vanuit mobile first moet uitgaan bij het schrijven van je code.
+Je kunt makkelijk van klein naar groot werken en je hoeft minder code te schrijven.
