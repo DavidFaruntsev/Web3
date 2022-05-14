@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #header, #sub-header {
     text-align: center;
     align-items: center;
@@ -14,12 +18,11 @@
 }
 
 .slot {
-    padding: 1em;
+    padding: 1rem;
     border: 1px solid #ddd;
     text-align: center;
     background-color: green;
-    width: 100px;
-    height: 100px;
+    height: 8rem;
     margin: 6px;
     display: flex;
     float: left;
@@ -46,8 +49,8 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 410px;
     height: 1000px;
     /*background: bisque;*/
-    float: right;
-    padding-top: 13vw;
+    /*float: right;*/
+    /*padding-top: 13vw;*/
 }
 
 .third-container {
@@ -71,14 +74,31 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 .parent {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    /*grid-template-columns: 1fr;*/
+    grid-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (min-width: 900px) {
+    .parent {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
 }
 
 #remainingTime {
-    width: 260px;
+    width: 270px;
     height: 20px;
     background-color: black;
     margin-left: auto;
