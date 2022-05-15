@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+
+
 #header, #sub-header {
     text-align: center;
     align-items: center;
@@ -24,7 +26,29 @@
     height: 8rem;
     margin: 6px;
     display: flex;
-    /*float: left;*/
+}
+
+
+.slot:active {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: darkblue;
+    height: 8rem;
+    margin: 6px;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.found-slot {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: darkgreen;
+    height: 8rem;
+    margin: 6px;
+    display: flex;
 }
 
 .card {
@@ -45,9 +69,6 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .second-container {
-    /*width: 300px;*/
-    /*height: 1000px;*/
-    /*background: bisque;*/
     padding-top: 13vw;
     margin-right: auto;
     margin-left: auto;
@@ -55,16 +76,18 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 
 .third-container {
     padding-top: 10vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
-.third-container>button {
+.third-container>input,button {
     float: left;
     clear: left;
-    margin: 5px;
-    width: 150px;
+    margin: 10px;
+    width: 300px;
     height: 30px;
 }
+
 
 #game {
     margin-top: 10vw;
