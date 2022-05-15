@@ -1,3 +1,18 @@
+Opdracht 1
+
+a:
+
+In het artikel kwam naar voren dat het vervelend is voor mensen die een screenreader moeten gebruiken als links of formulieren
+op de website niet gelabeld zijn. Voor blinde personen is de context dan soms niet duidelijk, en weten ze niet wat er bedoeld wordt met bijvoorbeeld
+een link. Links moeten daarom duidelijk beschreven worden. Informatie waar de link naartoe leidt vermelden i.p.v klik hier bijvoorbeeld.
+Ook formulieren kunnen vervelend zijn als ze niet gelabeld zijn, omdat een screenreader dan niet weet wat er met een veld bedoeld wordt.
+
+b:
+
+Ik ervaar het soms als vervelend als een website een hele onoverzichtelijke indeling heeft. Bij een onoverzichtelijke website
+staan onderdelen die eventueel bij elkaar horen op verschillende plekken op de website. Hierbij raak je veel tijd kwijt aan zoeken.
+Om dit te voorkomen zal ik eerst goed nadenken over wat bij elkaar hoort voordat ik de indeling van de website maak.
+
 Opdracht 2
 
 Wij leven in de wereld waar telefoons voor ons meest belangrijke rol spelen. Je kunt van alles mee doen. Gamen, betalingen maken, internetten enzovoort.
