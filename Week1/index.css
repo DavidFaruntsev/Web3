@@ -10,11 +10,10 @@
 
 .container {
     /*background-color: coral;*/
-    width: 1000px;
-    height: 1000px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    float: left;
+    /*float: left;*/
 }
 
 .slot {
@@ -25,7 +24,7 @@
     height: 8rem;
     margin: 6px;
     display: flex;
-    float: left;
+    /*float: left;*/
 }
 
 .card {
@@ -46,12 +45,12 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .second-container {
-    width: 300px;
-    height: 1000px;
+    /*width: 300px;*/
+    /*height: 1000px;*/
     /*background: bisque;*/
-    float: right;
     padding-top: 13vw;
-    margin-right: 6vw;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .third-container {
@@ -74,20 +73,39 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 
 .parent {
     display: grid;
-    justify-content: center;
+    justify-content: stretch;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    /*grid-template-columns: 1fr;*/
     grid-gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+
+
+#remainingTime {
+    width: 270px;
+    height: 20px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
 }
 
 @media screen and (min-width: 600px) {
     .parent {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
 }
 
 @media screen and (min-width: 900px) {
@@ -98,12 +116,11 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 
 }
 
-#remainingTime {
-    width: 270px;
-    height: 20px;
-    background-color: black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+@media screen and (max-width: 900px) {
+    .wrap{
+        flex-direction: column;
+
+    }
+
 }
 
