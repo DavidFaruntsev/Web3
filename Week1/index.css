@@ -29,7 +29,7 @@
 }
 
 
-.slot:active {
+.open-slot {
     padding: 1rem;
     border: 1px solid #ddd;
     text-align: center;
