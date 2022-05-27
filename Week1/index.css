@@ -22,24 +22,37 @@
     padding: 1rem;
     border: 1px solid #ddd;
     text-align: center;
-    background-color: green;
+    background-color: #eee;
     height: 8rem;
     margin: 6px;
     display: flex;
+    cursor: pointer;
 }
 
-
-.open-slot {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    text-align: center;
-    background-color: darkblue;
-    height: 8rem;
-    margin: 6px;
-    display: flex;
-    color: white;
-    justify-content: center;
+.slot:hover {
+    box-shadow: inset 0px 0px 0px 1px red;
 }
+
+.slot.done {
+    cursor: default;
+}
+
+.slot.done:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+/*.open-slot {*/
+/*    padding: 1rem;*/
+/*    border: 1px solid #ddd;*/
+/*    text-align: center;*/
+/*    background-color: darkblue;*/
+/*    height: 8rem;*/
+/*    margin: 6px;*/
+/*    display: flex;*/
+/*    color: white;*/
+/*    justify-content: center;*/
+/*}*/
 
 .found-slot {
     padding: 1rem;
@@ -145,5 +158,82 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
 
     }
 
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.green {
+    background-color: green;
+}
+
+.oranje {
+    background-color: orange;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.teal {
+    background-color: teal;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.navy {
+    background-color: navy;
+}
+
+.lime {
+    background-color: lime;
+}
+
+.coral {
+    background-color: coral;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.steelblue {
+    background-color: steelblue;
+}
+
+.olive {
+    background-color: olive;
+}
+
+
+.color-hidden {
+    background-color: #eee;
 }
 
