@@ -165,8 +165,8 @@
         </h3>
 
         <div class="third-container">
-            <label for="color">Kaartkleur</label>
-            <input type="color" value="#008000FF" id="color">
+            <label for="closed-color">Gesloten Kaart:</label>
+            <input type="color" value="#eee" id="closed-color" oninput="changeClosedColor()">
             <label for="open">Open Kaart:</label>
             <input type="color" value="#00008BFF" id="open">
             <label for="find">Gevonden kaart:</label>
@@ -177,8 +177,6 @@
             <select id="cardTheme" name="cardTheme" onchange="changeTheme()">
                 <option>Kleuren</option>
                 <option id="randomTheme">Random</option>
-<!--                <option id="dogTheme">Honden</option>-->
-<!--                <option id="catTheme">Katten</option>-->
             </select>
         </div>
 

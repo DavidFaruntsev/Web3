@@ -183,3 +183,21 @@ function changeTheme(){
     }
 }
 
+
+
+// css.style.backgroundColor = color;
+// css = document.querySelector('.color-hidden');
+// css.style.backgroundColor = color;
+
+function changeClosedColor() {
+    let colorselect = document.getElementById('closed-color');
+    for (let i=1;i<=36;i++){
+        let css = document.getElementById(i.toString());
+        console.log(css);
+        console.log(colorselect.value);
+        css.style.backgroundColor = colorselect.value;
+    }
+
+
+}
+
