@@ -71,6 +71,36 @@ async function randomTheme(){
 
 }
 
+function colorTheme(){
+    colors =
+        {
+            'red': 'red',
+            'blue': 'blue',
+            'violet': 'violet',
+            'green': 'green',
+            'oranje': 'oranje',
+            'black': 'black',
+            'yellow': 'yellow',
+            'pink': 'pink',
+            'teal': 'teal',
+            'aqua': 'aqua',
+            'purple': 'purple',
+            'brown': 'brown',
+            'navy': 'navy',
+            'lime': 'lime',
+            'coral': 'coral',
+            'grey': 'grey',
+            'steelblue': 'steelblue',
+            'olive': 'olive'
+        }
+
+        for (let color in colors){
+            let style = document.createElement("style");
+            style.innerHTML = `.${color} { background-image: url(${URL.createObjectURL(colors[color])}); }`;
+            document.getElementsByTagName('head')[0].appendChild(style);
+        }
+}
+
 // async function dogTheme(){
 //
 //     let imageUrl = "https://dog.ceo/api/breeds/image/random";
@@ -100,13 +130,13 @@ for (let color in colors) {
     const cardAIndex = parseInt(Math.random() * cards.length);
     const cardA = cards[cardAIndex];
     cards.splice(cardAIndex, 1);
-    cardA.className += `color-hidden`;
+    cardA.className = `slot color-hidden`;
     cardA.setAttribute('data-color', color);
 
     const cardBIndex = parseInt(Math.random() * cards.length);
     const cardB = cards[cardBIndex];
     cards.splice(cardBIndex, 1);
-    cardB.className += `color-hidden`;
+    cardB.className = `slot color-hidden`;
     cardB.setAttribute('data-color', color);
 }
 
@@ -123,9 +153,6 @@ function onCardClicked(e) {
         return;
     }
 
-    target.className = target.className
-        .replace(' color-hidden', '')
-        .trim();
     target.className += ' done';
 
     if (!clickedCard) {
@@ -159,27 +186,7 @@ function changeTheme(){
     if (selected === 'Random'){
         randomTheme().then(value => console.log(value));
     } else {
-        colors =
-            {
-                'red': 'red',
-                'blue': 'blue}',
-                'violet': 'violet',
-                'green': 'green',
-                'oranje': 'oranje',
-                'black': 'black',
-                'yellow': 'yellow',
-                'pink': 'pink',
-                'teal': 'teal',
-                'aqua': 'aqua',
-                'purple': 'purple',
-                'brown': 'brown',
-                'navy': 'navy',
-                'lime': 'lime',
-                'coral': 'coral',
-                'grey': 'grey',
-                'steelblue': 'steelblue',
-                'olive': 'olive'
-            }
+        colorTheme();
     }
 }
 
@@ -191,12 +198,12 @@ function changeTheme(){
 
 function changeClosedColor() {
     let colorselect = document.getElementById('closed-color');
-    for (let i=1;i<=36;i++){
-        let css = document.getElementById(i.toString());
-        console.log(css);
-        console.log(colorselect.value);
-        css.style.backgroundColor = colorselect.value;
+    let block = document.getElementsByClassName('slot color-hidden');
+    for (let i=0;i<block.length;i++){
+        block[i].style.backgroundColor = colorselect.value;
     }
+
+    console.log(document.getElementsByClassName('slot color-hidden'))
 
 
 }

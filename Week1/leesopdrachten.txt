@@ -19,3 +19,20 @@ Wij leven in de wereld waar telefoons voor ons meest belangrijke rol spelen. Je 
 Waar je ook bent kun je met je telefoon elke website bereiken. Je hoeft niet op een bepaalde plek te zijn wat wel het geval is met een desktop. Telefoons zijn veel handiger.
 Ik ben met auteur eens dat je vanuit mobile first moet uitgaan bij het schrijven van je code.
 Je kunt makkelijk van klein naar groot werken en je hoeft minder code te schrijven.
+
+Toetsmoment 2:
+
+Opdracht 1:
+
+Volgens het artikel zijn er twee manieren die toegepast kunnen worden om te kijken wat de populariteit is van JavaScript en
+hoeveel impact deze taal heeft. Het aantal keer dat javascript genoemd wordt op stackoverflow is een meetstaaf om te kijken
+hoeveel ontwikkelaars de taal gebruiken. Bovendien het uitschakelen van javascript in de browser, en vervolgens websites bezoeken
+een goede manier om te kijken hoeveel impact javascript heeft. Als dit uitgeschakeld is kan je kijken hoeveel functionaliteit
+er daadwerkelijk overblijft van een website. Ik heb dit voor een paar bekende sites gedaan, en kwam tot de conclusie dat javascript
+een groot deel uitmaakt van het ontwikkelen van websites.
+
+Opdracht 2:
+
+Een van de redenen genoemd in het artikel die volgens de schrijven kan leiden tot een daling in populariteit van javascript
+is de opkomst van alternatieven. Ik denk niet dat dit grote impact al hebben op de populariteit van javascript, omdat bijna elke
+browser ondersteuning heeft voor javascript, terwijl dit voor alternatieven niet het geval is.
