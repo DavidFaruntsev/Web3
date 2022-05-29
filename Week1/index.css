@@ -137,6 +137,7 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
     /*flex-direction: row;*/
 }
 
+
 @media screen and (min-width: 600px) {
     .parent {
         grid-template-columns: repeat(2, 1fr);

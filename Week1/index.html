@@ -172,6 +172,14 @@
             <label for="find">Gevonden kaart:</label>
             <input type="color" id="find" value="#006400FF">
             <button id="game" onclick="newGame()">Nieuwe spel</button>
+
+            <label for="cardTheme">Thema van de kaarten</label>
+            <select id="cardTheme" name="cardTheme" onchange="changeTheme()">
+                <option>Kleuren</option>
+                <option id="randomTheme">Random</option>
+<!--                <option id="dogTheme">Honden</option>-->
+<!--                <option id="catTheme">Katten</option>-->
+            </select>
         </div>
 
     </div>
