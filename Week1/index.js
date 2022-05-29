@@ -22,6 +22,7 @@ function generateLetters(numOfChar)
 
 let clickedCard = null;
 let preventClick = false;
+let combosFound = 0;
 
 
 const colors = [
@@ -95,7 +96,11 @@ function onCardClicked(e) {
                 preventClick = false;
             }, 500);
         } else {
+            combosFound++;
             clickedCard = null;
+            if (combosFound === 18) {
+                alert('Gefeliciteerd! Je hebt gewonnen!');
+            }
         }
     }
 }
