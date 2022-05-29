@@ -197,13 +197,13 @@ function changeTheme(){
 // css.style.backgroundColor = color;
 
 function changeClosedColor() {
-    let colorselect = document.getElementById('closed-color');
-    let block = document.getElementsByClassName('slot color-hidden');
-    for (let i=0;i<block.length;i++){
-        block[i].style.backgroundColor = colorselect.value;
-    }
-
-    console.log(document.getElementsByClassName('slot color-hidden'))
+    // let colorselect = document.getElementById('closed-color');
+    // let block = document.getElementsByClassName('slot color-hidden');
+    // for (let i=0;i<block.length;i++){
+    //     block[i].style.backgroundColor = colorselect.value;
+    // }
+    //
+    // console.log(document.getElementsByClassName('slot color-hidden'))
 
 
 }
