@@ -1,7 +1,5 @@
 async function getHighestScores() {
 
-    let top5;
-
     await fetch("http://localhost:8000/scores")
         .then(r => r.json())
         .then(json => json.sort((a, b) => b['score']-a['score']))

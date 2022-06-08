@@ -1,0 +1,38 @@
+Opdracht 1
+
+a:
+
+In het artikel kwam naar voren dat het vervelend is voor mensen die een screenreader moeten gebruiken als links of formulieren
+op de website niet gelabeld zijn. Voor blinde personen is de context dan soms niet duidelijk, en weten ze niet wat er bedoeld wordt met bijvoorbeeld
+een link. Links moeten daarom duidelijk beschreven worden. Informatie waar de link naartoe leidt vermelden i.p.v klik hier bijvoorbeeld.
+Ook formulieren kunnen vervelend zijn als ze niet gelabeld zijn, omdat een screenreader dan niet weet wat er met een veld bedoeld wordt.
+
+b:
+
+Ik ervaar het soms als vervelend als een website een hele onoverzichtelijke indeling heeft. Bij een onoverzichtelijke website
+staan onderdelen die eventueel bij elkaar horen op verschillende plekken op de website. Hierbij raak je veel tijd kwijt aan zoeken.
+Om dit te voorkomen zal ik eerst goed nadenken over wat bij elkaar hoort voordat ik de indeling van de website maak.
+
+Opdracht 2
+
+Wij leven in de wereld waar telefoons voor ons meest belangrijke rol spelen. Je kunt van alles mee doen. Gamen, betalingen maken, internetten enzovoort.
+Waar je ook bent kun je met je telefoon elke website bereiken. Je hoeft niet op een bepaalde plek te zijn wat wel het geval is met een desktop. Telefoons zijn veel handiger.
+Ik ben met auteur eens dat je vanuit mobile first moet uitgaan bij het schrijven van je code.
+Je kunt makkelijk van klein naar groot werken en je hoeft minder code te schrijven.
+
+Toetsmoment 2:
+
+Opdracht 1:
+
+Volgens het artikel zijn er twee manieren die toegepast kunnen worden om te kijken wat de populariteit is van JavaScript en
+hoeveel impact deze taal heeft. Het aantal keer dat javascript genoemd wordt op stackoverflow is een meetstaaf om te kijken
+hoeveel ontwikkelaars de taal gebruiken. Bovendien het uitschakelen van javascript in de browser, en vervolgens websites bezoeken
+een goede manier om te kijken hoeveel impact javascript heeft. Als dit uitgeschakeld is kan je kijken hoeveel functionaliteit
+er daadwerkelijk overblijft van een website. Ik heb dit voor een paar bekende sites gedaan, en kwam tot de conclusie dat javascript
+een groot deel uitmaakt van het ontwikkelen van websites.
+
+Opdracht 2:
+
+Een van de redenen genoemd in het artikel die volgens de schrijven kan leiden tot een daling in populariteit van javascript
+is de opkomst van alternatieven. Ik denk niet dat dit grote impact al hebben op de populariteit van javascript, omdat bijna elke
+browser ondersteuning heeft voor javascript, terwijl dit voor alternatieven niet het geval is.

@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+#header, #sub-header {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.container {
+    /*background-color: coral;*/
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /*float: left;*/
+}
+
+.slot {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #eee;
+    height: 8rem;
+    margin: 6px;
+    display: flex;
+    cursor: pointer;
+}
+
+.slot:hover {
+    box-shadow: inset 0px 0px 0px 1px red;
+}
+
+.slot.done {
+    cursor: default;
+}
+
+.slot.done:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+/*.open-slot {*/
+/*    padding: 1rem;*/
+/*    border: 1px solid #ddd;*/
+/*    text-align: center;*/
+/*    background-color: darkblue;*/
+/*    height: 8rem;*/
+/*    margin: 6px;*/
+/*    display: flex;*/
+/*    color: white;*/
+/*    justify-content: center;*/
+/*}*/
+
+.found-slot {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: darkgreen;
+    height: 8rem;
+    margin: 6px;
+    display: flex;
+}
+
+.card {
+    margin: auto;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+#main {
+display: grid;
+justify-content: center;
+grid-gap: 1em;
+grid-template-rows: repeat(var(--grid-rows), 1fr);
+grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.second-container {
+    padding-top: 13vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.third-container {
+    padding-top: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.third-container>input,button {
+    float: left;
+    clear: left;
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+
+#game {
+    margin-top: 10vw;
+}
+
+
+.parent {
+    display: grid;
+    justify-content: stretch;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+#remainingTime {
+    width: 270px;
+    height: 20px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
+}
+
+
+@media screen and (min-width: 600px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .parent {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .wrap{
+        flex-direction: column;
+
+    }
+
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.green {
+    background-color: green;
+}
+
+.oranje {
+    background-color: orange;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.teal {
+    background-color: teal;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.navy {
+    background-color: navy;
+}
+
+.lime {
+    background-color: lime;
+}
+
+.coral {
+    background-color: coral;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.steelblue {
+    background-color: steelblue;
+}
+
+.olive {
+    background-color: olive;
+}
+
+
+.color-hidden {
+    background-color: #eee;
+}
+
