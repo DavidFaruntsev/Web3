@@ -1,0 +1,49 @@
+.main-container {
+    justify-content: center;
+    display: flex;
+    padding-top: 25vh;
+}
+
+.text-container {
+    justify-content: center;
+    display: flex;
+}
+
+.form-container {
+    width: 500px;
+    height: 100%;
+}
+
+.inputOne-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.inputTwo-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.inputThree-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.inputFourth-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
+
+.btn-container {
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+}
