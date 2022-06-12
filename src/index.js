@@ -208,3 +208,38 @@ function changeClosedColor() {
 
 }
 
+const startingMinutes = 10;
+let time = startingMinutes * 60;
+
+const countDownEl = document.getElementById('countdown');
+
+setInterval(updateCountDown, 1000);
+
+
+function updateCountDown() {
+    const minutes = Math.floor(time/60);
+    let seconds = time % 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    countDownEl.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+}
+
+// const startingTime = 0;
+// let timer = startingTime * 60;
+//
+// const countTimeEl = document.getElementById('runtime');
+//
+// setInterval(updateCountTime, 1000);
+//
+//
+// function updateCountTime() {
+//     const min = Math.floor(timer/60);
+//     let sec = timer % 60;
+//
+//     sec = sec < 10 ? '0' + sec : sec;
+//
+//     countTimeEl.innerHTML = `${min}: ${sec}`;
+//     time++;
+// }
