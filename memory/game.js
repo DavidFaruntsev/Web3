@@ -1,13 +1,15 @@
 const section = document.querySelector('section');
-let gameState = [{
-    gameStarted: false,
-    foundSets: 0,
-}]
+let preferences = JSON.parse(window.localStorage.getItem('preferences'));
+console.log(preferences['closedColor']);
 
 let found = 0;
 
 window.addEventListener('load', () =>{
     startGame();
+    cards = document.querySelectorAll('.closedCard');
+    cards.forEach(item =>{
+        item.style.color = preferences['closedColor'];
+    })
 })
 const dataFormat = () => [
     {imgSrc: "", id: 1, name:'one'},
@@ -133,6 +135,7 @@ const cardGenerator = (theme) => {
          card.className = "card";
          openCard.className = 'openCard';
          closedCard.className = 'closedCard';
+         closedCard.style.background = preferences['closedColor'];
 
          openCard.src = item.imgSrc;
          card.setAttribute('name', item.name);
@@ -200,8 +203,6 @@ function startGame(){
         section.removeChild(child);
         child = section.lastElementChild;
     }
-
-    gameState.gameStarted = true;
 
     cardGenerator(theme);
 }

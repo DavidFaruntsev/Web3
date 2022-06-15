@@ -11,7 +11,7 @@
 <body>
 
 <div class="main-container">
-    <form class="form-container">
+    <div class="form-container">
         <div class="text-container">
             <h1>Settings</h1>
         </div>
@@ -19,25 +19,23 @@
             <label for="closed-color">Gesloten Kaart:</label>
             <input type="color" value="#eee" id="closed-color" oninput="changeClosedColor()">
         </div>
-        <div class="inputTwo-container">
-            <label for="open">Gevonden Kaart:</label>
-            <input type="color" value="#00008BFF" id="open">
-        </div>
         <div class="inputThree-container">
             <label for="cardTheme">Favoriete plaatjes</label>
             <select id="cardTheme" name="cardTheme">
-                <option>Plaatje 1</option>
-                <option>Plaatje 2</option>
+                <option>Dog</option>
+                <option>Cat</option>
+                <option>Random</option>
             </select>
         </div>
         <div class="inputFourth-container">
             <input placeholder="E-mail">
         </div>
         <div class="btn-container">
-            <button>Save</button>
+            <button onclick="changePreferences()">Save</button>
         </div>
-    </form>
+    </div>
 </div>
 
+<script src="app.js"></script>
 </body>
 </html>

@@ -52,7 +52,7 @@ section{
 }
 
 .closedCard{
-    background: green;
+    background: #be4141;
     backface-visibility: hidden;
 }
 
