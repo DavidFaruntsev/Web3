@@ -1,3 +1,5 @@
+let preferences = JSON.parse(window.localStorage.getItem('preferences'));
+
 function changePreferences(){
     const preferences = {
         closedColor: document.getElementById('closed-color').value,
@@ -8,3 +10,8 @@ function changePreferences(){
     window.location.href = 'index.html';
 
 }
+
+window.addEventListener('load', ()=>{
+    const selector = document.getElementById('closed-color');
+    selector.value = preferences['closedColor'];
+})

@@ -1,15 +1,10 @@
 const section = document.querySelector('section');
 let preferences = JSON.parse(window.localStorage.getItem('preferences'));
-console.log(preferences['closedColor']);
 
 let found = 0;
 
 window.addEventListener('load', () =>{
     startGame();
-    cards = document.querySelectorAll('.closedCard');
-    cards.forEach(item =>{
-        item.style.color = preferences['closedColor'];
-    })
 })
 const dataFormat = () => [
     {imgSrc: "", id: 1, name:'one'},
