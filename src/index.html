@@ -10,8 +10,6 @@
 </head>
 <body>
 
-
-
 <div class="wrap">
     <div class="container">
         <div id="header">
@@ -21,11 +19,9 @@
             <li>Verlopen tijd:<p id="runtime"></p></li>
             <li>Gevonden kaart-paren:</li>
             <li>Resterende toontijd:<p id="countdown"></p></li>
-            <div id="remainingTime"></div>
+            <div class="remainingTime"></div>
         </div>
         <div class="parent">
-            <!--        <main id="main"></main>-->
-            <!--        <script src="loop.js"></script>-->
             <div
                  class="slot color-hidden"
                  onclick="onCardClicked(event)" id="36"></div>
@@ -135,7 +131,8 @@
                  class="slot color-hidden"
                  onclick="onCardClicked(event)" id="35"></div>
         </div>
-    </div>
+<        </div>-->
+<!--    </div>-->
 
     <div class="second-container">
         <h3>Top vier</h3>
@@ -170,7 +167,7 @@
             <input type="color" value="#00008BFF" id="open">
             <label for="find">Gevonden kaart:</label>
             <input type="color" id="find" value="#006400FF">
-            <button id="game" onclick="newGame()">Nieuwe spel</button>
+            <button class="start">Nieuwe spel</button>
 
             <label for="cardTheme">Thema van de kaarten</label>
             <select id="cardTheme" name="cardTheme" onchange="changeTheme()">

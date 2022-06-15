@@ -25,7 +25,7 @@ let preventClick = false;
 let combosFound = 0;
 
 
-var colors =
+let colors =
     {
         'red': 'red',
         'blue': 'blue}',
@@ -45,7 +45,14 @@ var colors =
         'grey': 'grey',
         'steelblue': 'steelblue',
         'olive': 'olive'
-    }
+    };
+
+let gameState = {
+    flippedCards: 0,
+    lastCard: null,
+    foundPairs: 0
+}
+
 
 async function randomTheme(){
 
@@ -148,12 +155,11 @@ function onCardClicked(e) {
 
     if (
         preventClick ||
-        target === clickedCard ||
-        target.className.includes('done')) {
+        target === clickedCard) {
         return;
     }
 
-    target.className += ' done';
+    // target.className += ' done';
 
     if (!clickedCard) {
         clickedCard = target;

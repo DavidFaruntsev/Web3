@@ -1,0 +1,22 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.menuContainer{
+    margin-top: 5%;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .wrap{
+        flex-direction: row;
+    }
+}
+
+.themeSelector{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}

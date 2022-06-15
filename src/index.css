@@ -64,9 +64,9 @@
     display: flex;
 }
 
-.card {
-    margin: auto;
-}
+/*.card {*/
+/*    margin: auto;*/
+/*}*/
 
 :root {
     --grid-cols: 1;
@@ -238,3 +238,4 @@ grid-template-columns: repeat(var(--grid-cols), 1fr);
     background-color: #eee;
 }
 
+/*-----------------------------------------------------*/
