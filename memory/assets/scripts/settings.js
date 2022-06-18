@@ -13,11 +13,15 @@ const getPreferences = () => {
             'Authorization': 'Bearer '+localStorage.getItem('token'),
             'Content-Type': 'application/json'
         }))
-    }).then(r  => {return r.json()})
+    }).then(r  => {
+                
+        if (r.status === 401){alert('Your session has expired.')
+            location.href="login.html"}
+                return r.json()
+            })
         .then(r => {
             colorPickerClosed.value = r['color_closed']
             preferredApi.value = r['preferred_api']
-            console.log(r)
         })
 }
 
@@ -36,7 +40,13 @@ const updatePreferences = () => {
             'Authorization': 'Bearer '+localStorage.getItem('token'),
         }),
         body: JSON.stringify(data)
-    }).then(r => {return r.text()}).then(r => console.log(r))
+    }).then(r => {
+                
+        if (r.status === 401){
+            alert('Your session has expired.')
+            location.href="login.html"}
+        return r.text()
+    }).then(r => {location.href = 'index.html'})
 
 }
 
@@ -50,7 +60,13 @@ const updateEmail = () => {
             'Authorization': 'Bearer '+localStorage.getItem('token'),
         }),
         body: JSON.stringify(data)
-    }).then(r => {return r.text()}).then(r => console.log(r))
+    }).then(r => {
+        if (r.status === 401){
+            alert('Your session has expired.')
+            location.href = 'login.html'
+        }
+        return r.text()
+    }).then(r => {location.href = 'index.html'})
 }
 
 window.addEventListener('load', getPreferences);

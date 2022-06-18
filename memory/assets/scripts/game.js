@@ -11,7 +11,12 @@ const getPreferences = () => {
             'Content-Type': 'application/json'
         }))
     }).then(r => {
-        return r.json()
+                
+    if (r.status === 401){
+        alert('Your session has expired.')
+        location.href="login.html"
+    }
+    return r.json()
     })
 
 }
@@ -147,7 +152,14 @@ const cardGenerator = (theme) => {
          card.className = "card";
          openCard.className = 'openCard';
          closedCard.className = 'closedCard';
-         preferences.then(r => closedCard.style.background = r.color_closed)
+         preferences.then(r => {
+                     
+        if (r.status === 401) {
+            alert('Your session has expired.')
+            location.href="login.html"
+        }
+             closedCard.style.background = r.color_closed
+         })
 
 
          openCard.src = item.imgSrc;
@@ -200,11 +212,6 @@ const cardCheck = (e) => {
 }
 
 function startGame(){
-    const preferences = getPreferences();
-    preferences.then(r => {
-        document.querySelector('select').value = r.preferred_api
-    })
-
     let theme = document.querySelector('select').value;
     let section = document.querySelector('section');
 
@@ -225,4 +232,15 @@ function startGame(){
 
     cardGenerator(theme);
 }
+
+window.addEventListener('load', () => {
+    const preferences = getPreferences();
+    preferences.then(r => {
+
+        if (r.status === 401){alert('Your session has expired.')
+            location.href="login.html"}
+        document.querySelector('select').value = r.preferred_api
+    })
+})
+
 

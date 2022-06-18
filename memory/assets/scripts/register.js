@@ -14,7 +14,8 @@ const registerUser = () => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     }).then(res => {
-        console.log('User successfully created')
+            console.log('User successfully created')
+            location.href = "login.html"
     })
 }
 

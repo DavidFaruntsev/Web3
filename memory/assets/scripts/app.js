@@ -1,7 +1,11 @@
-async function getHighestScores(){
+const getHighestScores = async () => {
     try {
             const res = await fetch("http://127.0.0.1:8000/scores")
-            .then(r => r.json())
+            .then(r => {
+                if (r.status === 401){alert('Your session has expired.')
+                location.href="login.html"}
+                return r.json()
+            })
             .then(json => json.sort((a, b) => b['score'] - a['score']))
             .then(json => {
                 const slots = document.querySelectorAll('.playerRank');
@@ -15,5 +19,5 @@ async function getHighestScores(){
 }
 
 window.addEventListener('load', () => {
-    getHighestScores().then();
+    getHighestScores();
 })
