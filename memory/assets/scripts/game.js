@@ -1,8 +1,24 @@
 const section = document.querySelector('section');
+const userID = JSON.parse(atob(localStorage.getItem('token').split('.')[1]))['sub'];
+
 // let preferences = JSON.parse(window.localStorage.getItem('preferences'));
 let preferences = [
     {closedColor: 'green'}
 ]
+
+const getPreferences = () => {
+
+    return fetch(`http://localhost:8000/api/player/${userID}/preferences`, {
+        method: "GET",
+        headers: new Headers(({
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+        }))
+    }).then(r => {
+        return r.json()
+    })
+
+}
 
 let found = 0;
 
@@ -123,7 +139,7 @@ const randomizeCards = (theme) => {
 
 const cardGenerator = (theme) => {
      const imageArray = randomizeCards(theme);
-     console.log(imageArray);
+     const preferences = getPreferences();
 
      imageArray.then((res) => {
      res.forEach(item => {
@@ -134,7 +150,8 @@ const cardGenerator = (theme) => {
          card.className = "card";
          openCard.className = 'openCard';
          closedCard.className = 'closedCard';
-         closedCard.style.background = preferences['closedColor'];
+         preferences.then(r => closedCard.style.background = r.color_closed)
+
 
          openCard.src = item.imgSrc;
          card.setAttribute('name', item.name);
