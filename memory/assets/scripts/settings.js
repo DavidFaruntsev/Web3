@@ -1,17 +1,62 @@
-let preferences = JSON.parse(window.localStorage.getItem('preferences'));
+const userID = JSON.parse(atob(localStorage.getItem('token').split('.')[1]))['sub'];
+const colorPickerClosed = document.getElementById('closed-color');
+const colorPickerFound = document.getElementById('found-color');
+const preferredApi = document.getElementById('cardTheme');
+const email = document.getElementById('email')
+const PreferencesButton = document.getElementById('updatePreferences');
+const EmailButton = document.getElementById('updateEmail');
 
-function changePreferences(){
-    const preferences = {
-        closedColor: document.getElementById('closed-color').value,
-        preferredTheme: document.getElementById('cardTheme').value
+const getPreferences = () => {
+
+    fetch(`http://localhost:8000/api/player/${userID}/preferences`, {
+        method: "GET",
+        headers: new Headers(({
+            'Authorization': 'Bearer '+localStorage.getItem('token'),
+            'Content-Type': 'application/json'
+        }))
+    }).then(r  => {return r.json()})
+        .then(r => {
+            colorPickerClosed.value = r['color_closed']
+            colorPickerFound.value = r['color_found']
+            preferredApi.value = r['preferred_api']
+            console.log(r)
+        })
+}
+
+const updatePreferences = () => {
+
+    const data = {
+        'id': userID,
+        'api': preferredApi.value,
+        'color_closed': colorPickerClosed.value,
+        'color_found': colorPickerFound.value
     }
 
-    window.localStorage.setItem("preferences", JSON.stringify(preferences));
-    window.location.href = 'index.html';
+    fetch(`http://localhost:8000/api/player/${userID}/preferences`, {
+        method: "POST",
+        headers: new Headers({
+            'Authorization': 'Bearer '+localStorage.getItem('token'),
+        }),
+        body: JSON.stringify(data)
+    }).then(r => {return r.text()}).then(r => console.log(r))
 
 }
 
-window.addEventListener('load', ()=>{
-    const selector = document.getElementById('closed-color');
-    selector.value = preferences['closedColor'];
-})
+const updateEmail = () => {
+
+    const data = {email: email.value}
+
+    fetch(`http://localhost:8000/api/player/${userID}/email`, {
+        method: "PUT",
+        headers: new Headers({
+            'Authorization': 'Bearer '+localStorage.getItem('token'),
+        }),
+        body: JSON.stringify(data)
+    }).then(r => {return r.text()}).then(r => console.log(r))
+}
+
+window.addEventListener('load', getPreferences);
+PreferencesButton.addEventListener('click', updatePreferences);
+EmailButton.addEventListener('click', updateEmail)
+
+

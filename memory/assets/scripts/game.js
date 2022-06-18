@@ -4,7 +4,6 @@ let preferences = [
     {closedColor: 'green'}
 ]
 
-
 let found = 0;
 
 window.addEventListener('load', () =>{

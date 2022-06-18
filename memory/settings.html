@@ -17,7 +17,11 @@
         </div>
         <div class="inputOne-container">
             <label for="closed-color">Gesloten Kaart:</label>
-            <input type="color" value="#eee" id="closed-color" oninput="changeClosedColor()">
+            <input type="color" value="#eee" id="closed-color">
+        </div>
+        <div class="inputOne-container">
+            <label for="found-color">Gevonden Kaart:</label>
+            <input type="color" value="#eee" id="found-color">
         </div>
         <div class="inputThree-container">
             <label for="cardTheme">Favoriete plaatjes</label>
@@ -27,11 +31,14 @@
                 <option>Random</option>
             </select>
         </div>
+        <div class="btn-container">
+            <button id="updatePreferences">Save</button>
+        </div>
         <div class="inputFourth-container">
-            <input placeholder="E-mail">
+            <input id="email" placeholder="E-mail">
         </div>
         <div class="btn-container">
-            <button onclick="changePreferences()">Save</button>
+            <button id="updateEmail">Save</button>
         </div>
     </div>
 </div>
