@@ -1,10 +1,6 @@
 const section = document.querySelector('section');
 const userID = JSON.parse(atob(localStorage.getItem('token').split('.')[1]))['sub'];
 
-// let preferences = JSON.parse(window.localStorage.getItem('preferences'));
-let preferences = [
-    {closedColor: 'green'}
-]
 
 const getPreferences = () => {
 
@@ -141,6 +137,7 @@ const cardGenerator = (theme) => {
      const imageArray = randomizeCards(theme);
      const preferences = getPreferences();
 
+
      imageArray.then((res) => {
      res.forEach(item => {
          const card = document.createElement('div');
@@ -203,14 +200,20 @@ const cardCheck = (e) => {
 }
 
 function startGame(){
+    const preferences = getPreferences();
+    preferences.then(r => {
+        document.querySelector('select').value = r.preferred_api
+    })
+
     let theme = document.querySelector('select').value;
     let section = document.querySelector('section');
 
-    if (theme === 'random'){
+
+    if (theme === 'Random'){
         theme = randomTheme();
-    } else if (theme === 'dog'){
+    } else if (theme === 'Dog'){
         theme = dogTheme();
-    } else if (theme === 'cat'){
+    } else if (theme === 'Cat'){
         theme = catTheme();
     }
 

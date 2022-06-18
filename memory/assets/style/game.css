@@ -44,7 +44,7 @@ section{
     box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
 }
 
-.openCard,.closedCard{
+.openCard,.closedCard, .foundCard{
     width: 100%;
     height: 100%;
     position: absolute;

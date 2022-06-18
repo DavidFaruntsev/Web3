@@ -1,6 +1,5 @@
 const userID = JSON.parse(atob(localStorage.getItem('token').split('.')[1]))['sub'];
 const colorPickerClosed = document.getElementById('closed-color');
-const colorPickerFound = document.getElementById('found-color');
 const preferredApi = document.getElementById('cardTheme');
 const email = document.getElementById('email')
 const PreferencesButton = document.getElementById('updatePreferences');
@@ -17,7 +16,6 @@ const getPreferences = () => {
     }).then(r  => {return r.json()})
         .then(r => {
             colorPickerClosed.value = r['color_closed']
-            colorPickerFound.value = r['color_found']
             preferredApi.value = r['preferred_api']
             console.log(r)
         })
@@ -29,7 +27,7 @@ const updatePreferences = () => {
         'id': userID,
         'api': preferredApi.value,
         'color_closed': colorPickerClosed.value,
-        'color_found': colorPickerFound.value
+        'color_found': ''
     }
 
     fetch(`http://localhost:8000/api/player/${userID}/preferences`, {
