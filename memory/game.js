@@ -1,5 +1,9 @@
 const section = document.querySelector('section');
-let preferences = JSON.parse(window.localStorage.getItem('preferences'));
+// let preferences = JSON.parse(window.localStorage.getItem('preferences'));
+let preferences = [
+    {closedColor: 'green'}
+]
+
 
 let found = 0;
 
@@ -120,6 +124,7 @@ const randomizeCards = (theme) => {
 
 const cardGenerator = (theme) => {
      const imageArray = randomizeCards(theme);
+     console.log(imageArray);
 
      imageArray.then((res) => {
      res.forEach(item => {
