@@ -12,6 +12,7 @@ const loginUser = () => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)
     }).then(res => {
+        if (res.status === 401){return alert('Invalid username/password')}
         return res.json()
     }).then(res => {
         localStorage.setItem('token', res['token'])
