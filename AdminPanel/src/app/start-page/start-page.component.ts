@@ -10,12 +10,22 @@ import {gameStatistics} from "../interfaces";
 export class StartPageComponent implements OnInit {
 
   data:any
+  aantalSpelers = 0;
+  aantalSpellen = 0;
+  apiData = [];
 
   constructor(private statistics: GameStatisticsService) { }
 
   ngOnInit(): void {
-    this.statistics.getGameStatistics().subscribe((response:gameStatistics) => {
+    this.getGameData();
+  }
+
+  getGameData(){
+    return this.statistics.getGameStatistics().subscribe((response:gameStatistics) => {
       this.data = response;
+      this.aantalSpellen = this.data[0]['aantal_spellen'];
+      this.aantalSpelers = this.data[1]['aantal_spelers'];
+      this.apiData = this.data[2];
     });
   }
 

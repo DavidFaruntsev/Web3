@@ -10,6 +10,8 @@ import {RouterModule} from "@angular/router";
 import { AuthorizationFailedComponent } from './authorization-failed/authorization-failed.component';
 import { PlayerInfoComponent } from './player-info/player-info.component';
 import { LogoutComponent } from './logout/logout.component';
+import { GameStatisticsComponent } from './game-statistics/game-statistics.component';
+import { ApiStatisticsComponent } from './api-statistics/api-statistics.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LogoutComponent } from './logout/logout.component';
     LoginComponent,
     AuthorizationFailedComponent,
     PlayerInfoComponent,
-    LogoutComponent
+    LogoutComponent,
+    GameStatisticsComponent,
+    ApiStatisticsComponent
   ],
   imports: [
     BrowserModule,

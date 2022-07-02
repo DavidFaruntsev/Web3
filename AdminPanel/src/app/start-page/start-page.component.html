@@ -1,4 +1,4 @@
-<ng-container *ngFor="let item of data">
-
-  {{item.aantal_spelers}}
-</ng-container>
+<div>
+  <app-api-statistics [apiData]=apiData></app-api-statistics>
+  <app-game-statistics [aantalSpelers]=aantalSpelers [aantalSpellen]=aantalSpellen></app-game-statistics>
+</div>
