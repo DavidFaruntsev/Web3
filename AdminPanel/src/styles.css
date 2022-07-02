@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+  background: #C7DBE6;
+}
+
+nav{
+  background: #B5BEC6;
+}
+
+a{
+  color: #071108;
+}
+
+.nav-link{
+  color: #071108;
+}

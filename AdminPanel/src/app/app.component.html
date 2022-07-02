@@ -1,1 +1,18 @@
+<nav class="navbar-expand-md">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+        <a class="navbar-brand">Memory Dashboard</a>
+        <ng-container *ngIf="isAuthorized(); else:elseBlock">
+          <a class="nav-link" routerLink="player-info">Speler Info</a>
+          <a class="nav-link" routerLink="">Game Info</a>
+          <a class="nav-link" routerLink="logout">Log uit</a>
+        </ng-container>
+        <ng-template #elseBlock>
+          <a class="nav-link" routerLink="login">Login</a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
 <router-outlet></router-outlet>

@@ -43,6 +43,21 @@ export class SecurityService {
     return;
   }
 
+  getAuthStatus(){
+    let jwtHelper = new JwtHelperService();
+
+    if (!this.getToken()){
+      return false;
+    } else { // @ts-ignore
+      if (jwtHelper.isTokenExpired(this.getToken())){
+        localStorage.removeItem(this.token);
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   logout(){
     localStorage.removeItem('jwt');
     return this.router.navigate(['logout']);
