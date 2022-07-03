@@ -13,7 +13,8 @@ export class StartPageComponent implements OnInit {
   aantalSpelers = 0;
   aantalSpellen = 0;
   apiData = [];
-
+  labels = [];
+  chartData = [];
   constructor(private statistics: GameStatisticsService) { }
 
   ngOnInit(): void {
@@ -26,6 +27,11 @@ export class StartPageComponent implements OnInit {
       this.aantalSpellen = this.data[0]['aantal_spellen'];
       this.aantalSpelers = this.data[1]['aantal_spelers'];
       this.apiData = this.data[2];
+
+      this.apiData.forEach(item => {
+        this.labels.push(item['api']);
+        this.chartData.push(item['aantal']);
+      })
     });
   }
 

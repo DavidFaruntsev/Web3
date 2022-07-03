@@ -12,6 +12,9 @@ import { PlayerInfoComponent } from './player-info/player-info.component';
 import { LogoutComponent } from './logout/logout.component';
 import { GameStatisticsComponent } from './game-statistics/game-statistics.component';
 import { ApiStatisticsComponent } from './api-statistics/api-statistics.component';
+import { ApiChartComponent } from './api-chart/api-chart.component';
+import {NgChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { ApiStatisticsComponent } from './api-statistics/api-statistics.componen
     PlayerInfoComponent,
     LogoutComponent,
     GameStatisticsComponent,
-    ApiStatisticsComponent
+    ApiStatisticsComponent,
+    ApiChartComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import { ApiStatisticsComponent } from './api-statistics/api-statistics.componen
       {path: 'player-info', component:PlayerInfoComponent},
       {path: 'logout', component:LogoutComponent}
     ]),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

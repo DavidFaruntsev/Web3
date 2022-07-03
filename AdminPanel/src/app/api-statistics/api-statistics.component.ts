@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Chart, registerables} from "chart.js";
 
 @Component({
   selector: 'app-api-statistics',
@@ -7,11 +8,20 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ApiStatisticsComponent implements OnInit {
 
-  @Input() apiData = [];
+  chart:any;
 
-  constructor() { }
+  xData = [];
+  yData = [];
+  @Input() apiData:any
+  @Input() labels = this.xData;
+  @Input() data = this.yData;
+
+
+  constructor() {Chart.register(...registerables);}
 
   ngOnInit(): void {
   }
+
+
 
 }

@@ -1,4 +1,7 @@
 <div>
-  <app-api-statistics [apiData]=apiData></app-api-statistics>
+  <app-api-statistics [apiData]="apiData" [labels]="labels" [data]="chartData"></app-api-statistics>
+  <ng-container *ngFor="let item of apiData">
+    {{item['api']}}
+  </ng-container>
   <app-game-statistics [aantalSpelers]=aantalSpelers [aantalSpellen]=aantalSpellen></app-game-statistics>
 </div>
