@@ -36,3 +36,10 @@ Opdracht 2:
 Een van de redenen genoemd in het artikel die volgens de schrijven kan leiden tot een daling in populariteit van javascript
 is de opkomst van alternatieven. Ik denk niet dat dit grote impact al hebben op de populariteit van javascript, omdat bijna elke
 browser ondersteuning heeft voor javascript, terwijl dit voor alternatieven niet het geval is.
+
+Toetsmoment 4:
+
+Een reden om Web Components te leren is om vendor lock-in te voorkomen. In de toekomst kan nieuwe framework ontwikkeld worden die beter is dan frameworks van nu.
+Om te kunnen switchen zal het duur zijn voor bedrijven, maar ook mensen vinden die met oude frameworks werken zal duur worden.
+Door het gebruik maken van Web Components kan dit probleem voorkomen worden.
+Ben wel eens dat je Web Components moet leren. Ze kunnen framework versterken, ze worden veel gebruikt en ze worden ondersteund door frontend frameworks.
