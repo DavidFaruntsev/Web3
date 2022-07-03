@@ -1,0 +1,41 @@
+.playerInfoContainer{
+  padding-top: 2.5%;
+  background: #C7DBE6;
+
+}
+
+.order{
+  margin-left: 25%;
+}
+
+button{
+  margin-left: 5px;
+}
+
+.playerContainer{
+  margin-left: 25%;
+  width: 50%;
+  margin-right: 25%;
+  margin-top: 5%;
+  border: #071108;
+  border-radius: 8px;
+  background: #BFB1C1;
+  padding: 2.5%;
+}
+
+h5{
+  background: white;
+  width: 120px;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+p{
+  margin-left: 5%;
+  font-weight: bolder;
+}
+
+.player-info{
+  display: flex;
+  flex-direction: row;
+}

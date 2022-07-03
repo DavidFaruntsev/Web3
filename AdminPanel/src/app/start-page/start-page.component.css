@@ -8,9 +8,11 @@ html{
   padding: 5%;
   border-radius: 8px;
   border: #071108;
+  background: #C7DBE6;
+
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1300px){
   .layout-container{
     flex-direction: column;
   }

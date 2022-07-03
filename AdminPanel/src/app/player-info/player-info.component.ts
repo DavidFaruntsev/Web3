@@ -19,4 +19,19 @@ export class PlayerInfoComponent implements OnInit {
     })
   }
 
+  changeOrder() {
+    let button = document.getElementById('orderButton');
+    this.playerInfo.getPlayerInfo().subscribe((data:playerInfo) => {
+      this.data = data;
+      // @ts-ignore
+      if (button.innerHTML == 'Nieuwste spelers') {
+        this.data = this.data.reverse();
+        // @ts-ignore
+        button.innerHTML = 'Oudste spelers';
+      } else {
+        // @ts-ignore
+        button.innerHTML = 'Nieuwste spelers'
+      }
+    })
+  }
 }

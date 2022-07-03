@@ -1,4 +1,20 @@
-<ng-container *ngFor="let item of data">
-  <p>Username: {{item.username}}</p>
-  <p>Email: {{item.email}}</p>
-</ng-container>
+<div class="playerInfoContainer">
+  <div class="order">
+    <label for="orderButton">Sorteer op:</label>
+    <button class="btn-secondary" id="orderButton" (click)="changeOrder()">Nieuwste spelers</button>
+  </div>
+  <ng-container *ngFor="let item of data; let index = index">
+    <div class="playerContainer">
+      <h4>Player: {{index+1}}</h4>
+      <br>
+      <div class="player-info">
+        <h5>Username:</h5>
+        <p>{{item.username}}</p>
+      </div>
+      <div class="player-info">
+        <h5>Email:</h5>
+        <p>{{item.email}}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>
