@@ -1,0 +1,23 @@
+.layoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #C7DBE6;
+
+}
+
+.loginContainer{
+  padding: 25%;
+  background: #C7DBE6;
+
+}
+
+.form-control{
+  display: flex;
+  background: #C7DBE6;
+  flex-direction: column;
+  grid-gap: 5%;
+}
+
+

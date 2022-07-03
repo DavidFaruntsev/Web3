@@ -1,5 +1,9 @@
-<div class="form-control">
-  <input type="text" #username>
-  <input type="password" #password>
-  <button class="btn-primary" (click)="loginUser(username.value,password.value)">Login</button>
+<div class="layoutContainer">
+  <div class="loginContainer">
+    <div class="form-control">
+      <input type="text" #username>
+      <input type="password" #password>
+      <button class="btn-primary" (click)="loginUser(username.value,password.value)">Login</button>
+    </div>
+  </div>
 </div>
