@@ -1,0 +1,23 @@
+html{
+  background: #C7DBE6;
+}
+.layout-container{
+  display: flex;
+  /*grid-gap: 5%;*/
+  height: 100%;
+  padding: 5%;
+}
+
+@media screen and (max-width: 1024px){
+  .layout-container{
+    flex-direction: column;
+  }
+}
+
+app-api-statistics{
+  flex: 2;
+}
+
+app-game-statistics{
+  flex: 2;
+}

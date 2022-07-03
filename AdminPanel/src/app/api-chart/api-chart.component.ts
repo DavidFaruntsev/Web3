@@ -54,7 +54,8 @@ export class ApiChartComponent implements OnInit, AfterViewInit {
               'rgb(244, 211, 94)',
               'rgb(238, 150, 75)',
               'rgb(249, 87, 56)'
-            ]
+            ],
+            color: 'white'
           }]
         }
 

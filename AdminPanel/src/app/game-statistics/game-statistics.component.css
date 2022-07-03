@@ -1,0 +1,24 @@
+.statisticsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.statisticsItem{
+  margin: 15% auto;
+  background: #BFB1C1;
+  padding: 10%;
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+p{
+  margin-top: 5%;
+  background: #C7DBE6;
+  padding: 4px;
+  width: 20%;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: oblique;
+}

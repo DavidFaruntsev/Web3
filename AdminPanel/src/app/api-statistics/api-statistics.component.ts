@@ -8,15 +8,6 @@ import {Chart, registerables} from "chart.js";
 })
 export class ApiStatisticsComponent implements OnInit {
 
-  chart:any;
-
-  xData = [];
-  yData = [];
-  @Input() apiData:any
-  @Input() labels = this.xData;
-  @Input() data = this.yData;
-
-
   constructor() {Chart.register(...registerables);}
 
   ngOnInit(): void {
